@@ -63,9 +63,16 @@ function loadContacts() {
 
 function displayContact() {
   contact.insertAdjacentHTML("afterbegin", contact)
+  contact.insertAdjacentHTML("afterbegin", "<button>Close</button>")
   contactBtn.addEventListener("click", displayContact)
 }
 
+function closeContact() {
+  while (contact.hasChildNodes()) {
+    contact.firstChild.remove()
+  }
+
+}
 
 
 loadContacts()
