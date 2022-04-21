@@ -51,14 +51,21 @@ const contactsList = [
   },
 ]
 
+const contact = document.querySelector("#display_all_contacts")
+const contactBtn = document.querySelector("#text")
 
 function loadContacts() {
-
-  const contact = document.querySelector("#display_all_contacts")
   for (let contacts in contactsList) {
     contact.append(contacts)
-    console.log(contact)
   }
 }
+
+
+function displayContact() {
+  contact.insertAdjacentHTML("afterbegin", contact)
+  contactBtn.addEventListener("click", displayContact)
+}
+
+
 
 loadContacts()
