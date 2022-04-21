@@ -51,4 +51,14 @@ const contactsList = [
   },
 ]
 
-// Your code goes here
+
+function loadContacts() {
+
+  const contact = document.querySelector("#display_all_contacts")
+  for (let contacts in contactsList) {
+    contact.append(contacts)
+    console.log(contact)
+  }
+}
+
+loadContacts()
